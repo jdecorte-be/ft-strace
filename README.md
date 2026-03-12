@@ -65,38 +65,6 @@
 </p>
 </header>
 
-<p align="center">
-    <a href="https://github.com/jdecorte-be/ft_strace"><img src="https://shields.io/badge/Language-C-blue?labelColor=000000&logo=c&logoColor=white" alt="Language"></a>
-  <a href="https://github.com/jdecorte-be/ft_strace"><img src="https://shields.io/badge/Platform-Linux-orange?labelColor=000000&logo=linux&logoColor=white" alt="Platform"></a>
-  <a href="https://github.com/jdecorte-be/ft_strace"><img src="https://shields.io/badge/Arch-x86_64%20/%20i386-red?labelColor=000000&logo=intel&logoColor=white" alt="Arch"></a>
-
-  
-  <a href="https://github.com/jdecorte-be/ft_strace/stargazers">
-    <img src="https://shields.io/github/stars/jdecorte-be/ft_strace?logo=star&logoColor=white&labelColor=000000&color=yellow" alt="GitHub Stars">
-  </a>
-  <a href="https://github.com/jdecorte-be/ft_strace/issues">
-    <img src="https://shields.io/github/issues/jdecorte-be/ft_strace?logoColor=white&labelColor=000000&color=orange" alt="Open Issues">
-  </a>
-  <a href="https://github.com/jdecorte-be/ft_strace">
-    <img src="https://shields.io/github/repo-size/jdecorte-be/ft_strace?logo=database&logoColor=white&labelColor=000000&color=purple" alt="Repository Size">
-  </a>
-  <a href="https://github.com/jdecorte-be/ft_strace">
-    <img src="https://shields.io/github/languages/top/jdecorte-be/ft_strace?logo=code&logoColor=white&labelColor=000000&color=green" alt="Top Language">
-  </a>
-
-</p>
-
-<p align="center">
-  <a href="#overview">Overview</a> •
-  <a href="#features">Features</a> •
-  <a href="#architecture">Architecture</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#usage-guide">Usage Guide</a> •
-  <a href="#troubleshooting">Troubleshooting</a> •
-  <a href="#roadmap">Roadmap</a> •
-  <a href="#license">License</a>
-</p>
-<br>
 
 ## Overview
 
