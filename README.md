@@ -1,8 +1,69 @@
+<header>
 <h1 align="center">
-  <a href="https://github.com/jdecorte-be/ft_strace"><img src="assets/banner.png" alt="ft_strace" ></a>
+  <a href="https://github.com/jdecorte-be/ft-strace"><img src=".assets/banner.png" alt="ft-strace" ></a>
+  ft-strace
   <br>
-  ft_strace
 </h1>
+
+<p align="center">
+  A lightweight Linux system call tracer that intercepts and records system calls and signals. Features x86_64/i386 support and performance summary reporting.
+</p>
+
+<p align="center">
+<a href="https://www.42.fr/">
+    <img src="https://img.shields.io/badge/42-School%20Project-000000?logo=42&logoColor=white&labelColor=000000"
+         alt="42 School Project">
+  </a>
+<a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/badge/Focus-Syscall%20Tracing-007ec6?logo=gnome-terminal&logoColor=white&labelColor=000000"
+         alt="Focus Syscall Tracing">
+  </a>
+<a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/badge/Type-CLI%20Tool-555555?logo=powershell&logoColor=white&labelColor=000000"
+         alt="Type CLI Tool">
+  </a>
+<a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/badge/Platform-Linux-fcc624?logo=linux&logoColor=white&labelColor=000000"
+         alt="Platform Linux">
+  </a>
+</p>
+
+<p align="center">
+<a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/badge/Arch-x86__64%20%7C%20i386-4c8b99?logo=intel&logoColor=white&labelColor=000000"
+         alt="Arch x86_64 | i386">
+  </a>
+  <a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/badge/platform-Linux-000000?logo=linux&logoColor=white"
+         alt="ft-strace Linux">
+  </a>
+  <a href="https://github.com/jdecorte-be/ft-strace/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-GPL--3.0-AE81FF?labelColor=000000"
+         alt="ft-strace license">
+  </a>
+  <a href="https://github.com/jdecorte-be/ft-strace/stargazers">
+    <img src="https://img.shields.io/github/stars/jdecorte-be/ft-strace?logo=star&logoColor=white&labelColor=000000&color=E6DB74"
+         alt="ft-strace stars">
+  </a>
+  <a href="https://github.com/jdecorte-be/ft-strace/issues">
+    <img src="https://img.shields.io/github/issues/jdecorte-be/ft-strace?logoColor=white&labelColor=000000&color=orange"
+         alt="ft-strace issues">
+  </a>
+  <a href="https://github.com/jdecorte-be/ft-strace">
+    <img src="https://img.shields.io/github/repo-size/jdecorte-be/ft-strace?logo=database&logoColor=white&labelColor=000000&color=AE81FF"
+         alt="ft-strace repo size">
+  </a>
+</p>
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#key-features">Key Features</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#logic-flow">Logic Flow</a> •
+  <a href="#system-flowchart">System Flowchart</a> •
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#installation">Installation</a>
+</p>
+</header>
 
 <p align="center">
     <a href="https://github.com/jdecorte-be/ft_strace"><img src="https://shields.io/badge/Language-C-blue?labelColor=000000&logo=c&logoColor=white" alt="Language"></a>
