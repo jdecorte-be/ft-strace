@@ -257,7 +257,19 @@ int trace_bin(t_strace *strace)
                         {
                             if (strace->args.sum_opt)
                                 update_summary(strace, &regs, (sys_arch == ARCH_X86_64) ? x86_64_syscall : i386_syscall, syscall_nr, sys_arch, is_entry);
-                            snprintf(strace->execve_buffer, sizeof(strace->execve_buffer), "execve(\"%s\", [/* arguments */], [/* %ld vars */])", "NULL", strace->n_env);
+                            
+                            // build arguments string
+                            char args_buf[BUFFER_SIZE] = "[";
+                            size_t offset = 1;
+                            for (int i = 0; strace->av[i] != NULL && offset < sizeof(args_buf) - 10; i++)
+                            {
+                                if (i > 0)
+                                    offset += snprintf(args_buf + offset, sizeof(args_buf) - offset, ", ");
+                                offset += snprintf(args_buf + offset, sizeof(args_buf) - offset, "\"%s\"", strace->av[i]);
+                            }
+                            snprintf(args_buf + offset, sizeof(args_buf) - offset, "]");
+                            
+                            snprintf(strace->execve_buffer, sizeof(strace->execve_buffer), "execve(\"%s\", %s, [/* %ld vars */])", strace->av[0], args_buf, strace->n_env);
                         }
                         else
                         {
@@ -268,6 +280,9 @@ int trace_bin(t_strace *strace)
                                 if (!strace->args.sum_opt)
                                     fprintf(stderr, "%s = 0\n", strace->execve_buffer);
                             }
+
+                            if (sys_arch == ARCH_I386)
+                                fprintf(stderr, "[ Process PID=%d runs in 32 bit mode. ]\n", strace->pid);
                         }
                     }
                     else

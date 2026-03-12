@@ -193,36 +193,36 @@ void print_syscall(t_strace *strace, syscall_t sc, int argc, ...)
 
         switch (sc.type_args[i])
         {
-        case INT:
-            fprintf(stderr, "%d", (int)arg);
-            break;
-        case ULONG:
-            fprintf(stderr, "%lu", (unsigned long)arg);
-            break;
-        case PTR:
-            fprintf(stderr, arg ? "%p" : "NULL", (void *)arg);
-            break;
-        case STR:
-            print_string(strace->pid, (void *)arg);
-            break;
-        case ARGV:
-            print_argv((char **)arg);
-            break;
-        case FLAG_OPEN:
-            print_flag_open((int)arg);
-            break;
-        case ENVP:
-            fprintf(stderr, "%p /* %ld vars */", (void *)arg, strace->n_env);
-            break;
-        case SIGNAL:
-            if (arg < SYS_SIGNAME_COUNT)
-                fprintf(stderr, "%s", sys_signame[arg]);
-            else
-                fprintf(stderr, "%ld", arg);
-            break;
-        default:
-            fprintf(stderr, "%#lx", arg);
-            break;
+            case INT:
+                fprintf(stderr, "%d", (int)arg);
+                break;
+            case ULONG:
+                fprintf(stderr, "%lu", (unsigned long)arg);
+                break;
+            case PTR:
+                fprintf(stderr, arg ? "%p" : "NULL", (void *)arg);
+                break;
+            case STR:
+                print_string(strace->pid, (void *)arg);
+                break;
+            case ARGV:
+                print_argv((char **)arg);
+                break;
+            case FLAG_OPEN:
+                print_flag_open((int)arg);
+                break;
+            case ENVP:
+                fprintf(stderr, "%p /* %ld vars */", (void *)arg, strace->n_env);
+                break;
+            case SIGNAL:
+                if (arg < SYS_SIGNAME_COUNT)
+                    fprintf(stderr, "%s", sys_signame[arg]);
+                else
+                    fprintf(stderr, "%ld", arg);
+                break;
+            default:
+                fprintf(stderr, "%#lx", arg);
+                break;
         }
     }
     va_end(ap);

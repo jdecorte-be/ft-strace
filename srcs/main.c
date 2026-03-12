@@ -39,7 +39,7 @@ int main(int ac, char **av, char **env)
     
     // -- parse command line --
     int index;
-    argp_parse(&argp, ac, av, 0, &index, &strace.args);
+    argp_parse(&argp, ac, av, ARGP_IN_ORDER, &index, &strace.args);
     ac -= index;
     av += index;
 
@@ -47,19 +47,19 @@ int main(int ac, char **av, char **env)
 
     while (env[strace.n_env])
         strace.n_env++;
+    strace.av = av;
 
     strace.pid = fork();
     if (strace.pid < 0)
     {
-        perror("vfork");
+        perror("fork");
         return EXIT_FAILURE;
     }
 
     if(strace.pid == 0)
     {
         raise(SIGSTOP);
-        // execvp(av[0], av);
-        execlp(av[0], av[0], NULL);
+        execvp(av[0], av);
         perror("exec");
     }
 

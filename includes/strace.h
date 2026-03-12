@@ -63,6 +63,7 @@ typedef struct s_strace
 
     pid_t pid;
     size_t n_env;
+    char **av;
 } t_strace;
 
 typedef struct syscall_s
@@ -96,6 +97,7 @@ typedef struct i386_user_regs_struct {
 
 void print_summary(t_strace *strace);
 void print_syscall(t_strace *strace, syscall_t syscall, int argc, ...);
+void print_argv_from_proc(pid_t pid, void *argv_addr);
 int trace_bin(t_strace *strace);
 void print_siginfo(siginfo_t *si);
 void exec_with_path(char **av, char **env);
